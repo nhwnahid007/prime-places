@@ -5,6 +5,7 @@ import UpdateProfile from "../components/updateProfile/UpdateProfile";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Error from "../pages/Error/Error";
+import DetailsProperty from "../pages/detailsProperty/DetailsProperty";
 
 const router = createBrowserRouter([
     {
@@ -14,20 +15,28 @@ const router = createBrowserRouter([
       children: [
         {
             path: '/',
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: ()=> fetch('/estates.json')
         },
         {
           path: '/update',
           element: <UpdateProfile></UpdateProfile>
         },
        {
-        path: 'login',
+        path: '/login',
         element: <Login></Login>
        },
        {
-        path: 'register',
+        path: '/register',
         element: <Register></Register>
-       }
+       },
+       {
+        path: '/property/:id',
+        element: <DetailsProperty></DetailsProperty>,
+        loader: ()=> fetch('../estates.json')
+
+       },
+
       ]
     },
   ]);
