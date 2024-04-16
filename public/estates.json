@@ -9,7 +9,8 @@
       "area": "5000 sq ft",
       "location": "Malibu, California",
       "facilities": ["Ocean View", "Swimming Pool", "Spa", "Gourmet Kitchen", "Home Theater", "Gym", "Guest House", "Landscaped Gardens"],
-      "image": "https://i.ibb.co/qF6p2Sx/img-lux-1.jpg"
+      "image": "https://i.ibb.co/qF6p2Sx/img-lux-1.jpg",
+      "stars": 5
     },
     {
       "id": 2,
@@ -21,7 +22,8 @@
       "area": "4000 sq ft",
       "location": "Manhattan, New York",
       "facilities": ["City View", "Private Terrace", "Swimming Pool", "Fitness Center", "Concierge Service", "Parking Garage"],
-      "image": "https://i.ibb.co/qNWyxbC/img-lux-2.jpg"
+      "image": "https://i.ibb.co/qNWyxbC/img-lux-2.jpg",
+      "stars": 4
     },
     {
       "id": 3,
@@ -33,7 +35,8 @@
       "area": "6000 sq ft",
       "location": "Miami Beach, Florida",
       "facilities": ["Beachfront Location", "Infinity Pool", "Private Beach Access", "Spa", "Outdoor Kitchen", "Home Office", "Media Room"],
-      "image": "https://i.ibb.co/nCzzyKv/img-lux-3.jpg"
+      "image": "https://i.ibb.co/nCzzyKv/img-lux-3.jpg",
+      "stars": 4.5
     },
     {
       "id": 4,
@@ -45,7 +48,8 @@
       "area": "8000 sq ft",
       "location": "Aspen, Colorado",
       "facilities": ["Mountain View", "Ski-In/Ski-Out Access", "Outdoor Hot Tub", "Wine Cellar", "Game Room", "Home Theater", "Fitness Center"],
-      "image": "https://i.ibb.co/R2j7xDM/img-lux-4.jpg"
+      "image": "https://i.ibb.co/R2j7xDM/img-lux-4.jpg",
+      "stars": 4
     },
     {
       "id": 5,
@@ -57,7 +61,8 @@
       "area": "10000 sq ft",
       "location": "Napa Valley, California",
       "facilities": ["Vineyard View", "Winery", "Tasting Room", "Outdoor Dining Area", "Pool", "Tennis Court", "Guest Cottage"],
-      "image": "https://i.ibb.co/Njv65tz/img-lux-5.jpg"
+      "image": "https://i.ibb.co/Njv65tz/img-lux-5.jpg",
+      "stars": 4.5
     },
     {
       "id": 6,
@@ -69,7 +74,8 @@
       "area": "12000 sq ft",
       "location": "Palm Beach, Florida",
       "facilities": ["Waterfront Location", "Private Dock", "Infinity Pool", "Tennis Court", "Gourmet Kitchen", "Library", "Home Theater"],
-      "image": "https://i.ibb.co/m0pcJ09/img-lux-6.jpg"
+      "image": "https://i.ibb.co/m0pcJ09/img-lux-6.jpg",
+      "stars": 5
     },
     {
       "id": 7,
@@ -81,7 +87,8 @@
       "area": "3000 sq ft",
       "location": "London, United Kingdom",
       "facilities": ["City View", "Concierge Service", "Fitness Center", "Swimming Pool", "Private Terrace", "Parking Garage", "24/7 Security"],
-      "image": "https://i.ibb.co/jTS6K65/img-lux-7.jpg"
+      "image": "https://i.ibb.co/jTS6K65/img-lux-7.jpg",
+      "stars": 5
     },
     {
       "id":8,
@@ -93,7 +100,8 @@
       "area": "9000 sq ft",
       "location": "Lake Tahoe, California",
       "facilities": ["Lake View", "Private Beach Access", "Boat Dock", "Outdoor Kitchen", "Home Theater", "Wine Cellar", "Guest House"],
-      "image": "https://i.ibb.co/XjTxKrr/img-lux-8.jpg"
+      "image": "https://i.ibb.co/XjTxKrr/img-lux-8.jpg",
+      "stars": 4.5
     },
     {
         "id": 9,
@@ -105,6 +113,7 @@
         "area": "15000 sq ft",
         "location": "Montana, United States",
         "facilities": ["Mountain View", "Ranch Land", "Equestrian Facilities", "Guest Cabins", "Gourmet Kitchen", "Fitness Center", "Outdoor Pool"],
-        "image": "https://i.ibb.co/qFJzM8F/img-lux-9.jpg"
+        "image": "https://i.ibb.co/qFJzM8F/img-lux-9.jpg",
+        "stars": 5
       }
     ]

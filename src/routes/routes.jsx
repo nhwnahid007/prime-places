@@ -6,6 +6,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Error from "../pages/Error/Error";
 import DetailsProperty from "../pages/detailsProperty/DetailsProperty";
+import Contact from "../pages/Contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
             path: '/',
             element: <Home></Home>,
             loader: ()=> fetch('/estates.json')
+        },
+        {
+            path: '/contact',
+            element: <Contact></Contact>
         },
         {
           path: '/update',

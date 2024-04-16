@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { IoLocationSharp } from "react-icons/io5";
+import { FaStar } from "react-icons/fa6";
 const EstateCard = ({ estateData }) => {
-  const { id,image, estate_title, price, location,status } = estateData;
+  const { id,image, estate_title, price, location,status,stars } = estateData;
   return (
     <div className="w-lg relative h-[600px]  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800 mx-auto">
       <img
@@ -19,9 +20,16 @@ const EstateCard = ({ estateData }) => {
           </p>
           <p className=" text-xl dark:text-gray-800">
           <span className="font-bold">Price: </span>{price}
-          </p>
-          <p className=" text-xl dark:text-gray-800">
-          {status}
+          <p>
+              </p>
+             <div className="flex items-center justify-between">
+                  <p className=" text-xl dark:text-gray-800">
+                  {status} 
+                  </p>
+                  <p className="flex items-center justify-center text-xl dark:text-gray-800">
+                  {stars} <FaStar className="text-orange-400" />
+                  </p>
+             </div>
           </p>
         </div>
         <div className="">
