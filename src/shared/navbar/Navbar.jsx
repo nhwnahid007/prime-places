@@ -28,7 +28,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost flex items-center text-xl">
+        <Link to='/' className="btn btn-ghost flex items-center text-xl">
           {" "}
           <img
             className="w-7"
@@ -36,7 +36,7 @@ const Navbar = () => {
             alt=""
           />{" "}
           Prime Places
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

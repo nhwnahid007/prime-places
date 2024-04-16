@@ -1,0 +1,110 @@
+[
+    {
+      "id": "1",
+      "estate_title": "Luxury Villa with Ocean View",
+      "segment_name": "Luxury",
+      "description": "This stunning luxury villa offers breathtaking ocean views and unparalleled luxury living. Featuring spacious living areas, high-end finishes, and resort-style amenities, it is the epitome of luxury coastal living.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["Ocean View", "Swimming Pool", "Spa", "Gourmet Kitchen", "Home Theater", "Gym", "Guest House", "Landscaped Gardens"],
+      "image": "https://i.ibb.co/qF6p2Sx/img-lux-1.jpg"
+    },
+    {
+      "id": "2",
+      "estate_title": "Luxury Penthouse in Manhattan",
+      "segment_name": "Luxury",
+      "description": "Experience the height of luxury living in this exquisite penthouse located in the heart of Manhattan. With sweeping city views, contemporary design, and world-class amenities, this penthouse offers the ultimate urban lifestyle.",
+      "price": "$10,000,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "Manhattan, New York",
+      "facilities": ["City View", "Private Terrace", "Swimming Pool", "Fitness Center", "Concierge Service", "Parking Garage"],
+      "image": "https://i.ibb.co/qNWyxbC/img-lux-2.jpg"
+    },
+    {
+      "id": "3",
+      "estate_title": "Luxury Beachfront Estate in Miami",
+      "segment_name": "Luxury",
+      "description": "Indulge in luxurious beachfront living with this stunning estate located in the exclusive Miami Beach area. Boasting panoramic ocean views, private beach access, and lavish amenities, this estate offers the ultimate retreat.",
+      "price": "$8,500,000",
+      "status": "sale",
+      "area": "6000 sq ft",
+      "location": "Miami Beach, Florida",
+      "facilities": ["Beachfront Location", "Infinity Pool", "Private Beach Access", "Spa", "Outdoor Kitchen", "Home Office", "Media Room"],
+      "image": "https://i.ibb.co/nCzzyKv/img-lux-3.jpg"
+    },
+    {
+      "id": "4",
+      "estate_title": "Luxury Mountain Retreat in Aspen",
+      "segment_name": "Luxury",
+      "description": "Escape to this luxurious mountain retreat nestled in the breathtaking landscapes of Aspen. Offering unparalleled privacy, stunning mountain views, and world-class amenities, this estate is perfect for outdoor enthusiasts and nature lovers.",
+      "price": "$12,000,000",
+      "status": "sale",
+      "area": "8000 sq ft",
+      "location": "Aspen, Colorado",
+      "facilities": ["Mountain View", "Ski-In/Ski-Out Access", "Outdoor Hot Tub", "Wine Cellar", "Game Room", "Home Theater", "Fitness Center"],
+      "image": "https://i.ibb.co/R2j7xDM/img-lux-4.jpg"
+    },
+    {
+      "id": "5",
+      "estate_title": "Luxury Vineyard Estate in Napa Valley",
+      "segment_name": "Luxury",
+      "description": "Live the wine country dream with this exceptional vineyard estate located in the renowned Napa Valley. With lush vineyards, a private winery, and elegant living spaces, this estate offers the epitome of luxury wine country living.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "10000 sq ft",
+      "location": "Napa Valley, California",
+      "facilities": ["Vineyard View", "Winery", "Tasting Room", "Outdoor Dining Area", "Pool", "Tennis Court", "Guest Cottage"],
+      "image": "https://i.ibb.co/Njv65tz/img-lux-5.jpg"
+    },
+    {
+      "id": "6",
+      "estate_title": "Luxury Waterfront Mansion in Palm Beach",
+      "segment_name": "Luxury",
+      "description": "Discover luxurious waterfront living in this magnificent mansion located in the prestigious Palm Beach area. With expansive water views, lush landscaping, and opulent interiors, this mansion offers an unparalleled lifestyle.",
+      "price": "$20,000,000",
+      "status": "sale",
+      "area": "12000 sq ft",
+      "location": "Palm Beach, Florida",
+      "facilities": ["Waterfront Location", "Private Dock", "Infinity Pool", "Tennis Court", "Gourmet Kitchen", "Library", "Home Theater"],
+      "image": "https://i.ibb.co/m0pcJ09/img-lux-6.jpg"
+    },
+    {
+      "id": "7",
+      "estate_title": "Luxury City Residence in London",
+      "segment_name": "Luxury",
+      "description": "Experience cosmopolitan living at its finest in this luxurious city residence located in the heart of London. With stunning city views, contemporary design, and five-star amenities, this residence offers the ultimate urban lifestyle.",
+      "price": "£10,000,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "London, United Kingdom",
+      "facilities": ["City View", "Concierge Service", "Fitness Center", "Swimming Pool", "Private Terrace", "Parking Garage", "24/7 Security"],
+      "image": "https://i.ibb.co/jTS6K65/img-lux-7.jpg"
+    },
+    {
+      "id": "8",
+      "estate_title": "Luxury Lakeside Retreat in Lake Tahoe",
+      "segment_name": "Luxury",
+      "description": "Escape to this luxurious lakeside retreat nestled in the serene surroundings of Lake Tahoe. With panoramic lake views, private beach access, and luxurious amenities, this retreat offers the ultimate lakefront living experience.",
+      "price": "$18,000,000",
+      "status": "sale",
+      "area": "9000 sq ft",
+      "location": "Lake Tahoe, California",
+      "facilities": ["Lake View", "Private Beach Access", "Boat Dock", "Outdoor Kitchen", "Home Theater", "Wine Cellar", "Guest House"],
+      "image": "https://i.ibb.co/XjTxKrr/img-lux-8.jpg"
+    },
+    {
+        "id": "9",
+        "estate_title": "Luxury Ranch Estate in Montana",
+        "segment_name": "Luxury",
+        "description": "Live the western dream with this exceptional ranch estate located in the rugged landscapes of Montana. With vast open spaces, stunning mountain views, and world-class equestrian facilities, this estate offers the ultimate western lifestyle.",
+        "price": "$25,000,000",
+        "status": "sale",
+        "area": "15000 sq ft",
+        "location": "Montana, United States",
+        "facilities": ["Mountain View", "Ranch Land", "Equestrian Facilities", "Guest Cabins", "Gourmet Kitchen", "Fitness Center", "Outdoor Pool"],
+        "image": "https://i.ibb.co/qFJzM8F/img-lux-9.jpg"
+      }
+    ]
