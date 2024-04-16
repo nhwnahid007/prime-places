@@ -20,7 +20,7 @@ const DetailsProperty = () => {
       <div className="container min-h-screen  mx-auto lg:flex lg:justify-center px-5 py-24 lg:items-center gap-20">
         <div className="flex lg:w-2/3 justify-center items-center">
           <img
-            className="rounded-2xl w-[600px] mb-10 object-cover object-center"
+            className="rounded-2xl w-96 lg:w-[600px] mb-10 object-cover object-center"
             alt="hero"
             src={image}
           />

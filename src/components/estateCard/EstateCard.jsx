@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-
+import { IoLocationSharp } from "react-icons/io5";
 const EstateCard = ({ estateData }) => {
-  const { id,image, estate_title, price, location } = estateData;
+  const { id,image, estate_title, price, location,status } = estateData;
   return (
-    <div className="w-lg relative h-[700px]  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800 mx-auto">
+    <div className="w-lg relative h-[600px]  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800 mx-auto">
       <img
         src={image}
         alt=""
@@ -14,8 +14,14 @@ const EstateCard = ({ estateData }) => {
           <h2 className="text-3xl font-semibold tracking-wide">
             {estate_title}
           </h2>
-          <p className="dark:text-gray-800">
-            Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.
+          <p className="flex text-xl items-center dark:text-gray-800">
+          <IoLocationSharp /> {location}
+          </p>
+          <p className=" text-xl dark:text-gray-800">
+          <span className="font-bold">Price: </span>{price}
+          </p>
+          <p className=" text-xl dark:text-gray-800">
+          {status}
           </p>
         </div>
         <div className="">
