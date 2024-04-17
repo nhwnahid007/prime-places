@@ -18,14 +18,16 @@ const Navbar = () => {
         <NavLink to="/contact">Contact</NavLink>
       </li>
       
-      <li>
+      {
+        user && <li>
         <NavLink to="/update">Update Profile</NavLink>
       </li>
+      }
     </>
   );
   return (
     <div className="navbar bg-base-100">
-      <div className="navbar-start">
+      <div className="navbar-start z-10">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <FaBars className="text-2xl" />

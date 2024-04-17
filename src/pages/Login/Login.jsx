@@ -1,8 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import UseAuth from "../../hooks/UseAuth";
 
 const Login = () => {
     const {signInUser} = UseAuth()
+    const location = useLocation()
+    console.log(location)
+    const navigate = useNavigate()
     const handleLogin = (e)=>{
         e.preventDefault();
         console.log(e.currentTarget)
@@ -15,6 +18,8 @@ const Login = () => {
         signInUser(email,password)
         .then(result =>{
             console.log(result.user)
+            //navigate aftter login
+            navigate(location?.state?location.state:'/')
         })
         .catch(error => {
             console.log(error)

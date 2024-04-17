@@ -7,42 +7,45 @@ import Register from "../pages/Register/Register";
 import Error from "../pages/Error/Error";
 import DetailsProperty from "../pages/detailsProperty/DetailsProperty";
 import Contact from "../pages/Contact/Contact";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root></Root>,
-      errorElement: <Error></Error> ,
-      children: [
-        {
-            path: '/',
-            element: <Home></Home>,
-            loader: ()=> fetch('/estates.json')
-        },
-        {
-            path: '/contact',
-            element: <Contact></Contact>
-        },
-        {
-          path: '/update',
-          element: <UpdateProfile></UpdateProfile>
-        },
-       {
-        path: '/login',
-        element: <Login></Login>
-       },
-       {
-        path: '/register',
-        element: <Register></Register>
-       },
-       {
-        path: '/property/:id',
-        element: <DetailsProperty></DetailsProperty>,
-        loader: ()=> fetch('../estates.json')
-
-       },
-
-      ]
-    },
-  ]);
-  export default router;
+  {
+    path: "/",
+    element: <Root></Root>,
+    errorElement: <Error></Error>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch("/estates.json"),
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
+      },
+      {
+        path: "/update",
+        element: <UpdateProfile></UpdateProfile>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/property/:id",
+        element: (
+          <PrivateRoute>
+            <DetailsProperty></DetailsProperty>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/estates.json"),
+      },
+    ],
+  },
+]);
+export default router;
