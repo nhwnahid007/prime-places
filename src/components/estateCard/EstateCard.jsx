@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaStar } from "react-icons/fa6";

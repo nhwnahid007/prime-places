@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import EstateCard from "../../components/estateCard/EstateCard";
 import BannerSlider from "../../components/BannerSlider/BannerSlider";
+import Quotes from "../../components/quotes/Quotes";
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
                     estatesData.map(estateData => <EstateCard key={estateData.id} estateData={estateData}></EstateCard>)
                 }
             </div>
+            <Quotes></Quotes>
         </div>
     );
 };

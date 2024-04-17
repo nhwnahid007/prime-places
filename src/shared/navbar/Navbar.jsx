@@ -1,7 +1,14 @@
 import { FaBars } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
+import UseAuth from "../../hooks/UseAuth";
 
 const Navbar = () => {
+  const {user,logOut} = UseAuth()
+  const handleSignOut= () =>{
+    logOut()
+    .then()
+    .catch()
+  }
   const navLinks = (
     <>
       <li>
@@ -47,8 +54,13 @@ const Navbar = () => {
           {navLinks}
         </ul>
       </div>
+      
       <div className="navbar-end">
+      {
+        user ? <button onClick={handleSignOut} className="btn">Logout</button>:
         <Link to='/login' className="btn">Sign  in</Link>
+      }
+        
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import UseAuth from "../../hooks/UseAuth";
 
 const Register = () => {
+    const {createUser} = UseAuth()
   const handleRegister = (e) => {
     e.preventDefault();
     console.log(e.currentTarget);
@@ -10,6 +12,13 @@ const Register = () => {
     const photoUrl = form.get('photoUrl')
     const name = form.get('name')
     console.log(email,password,photoUrl,name);
+
+    createUser(email,password)
+    .then(result => {
+        console.log(result.user)
+    })
+    .catch(error =>{
+    console.log(error)})
     
   };
   return (
