@@ -1,25 +1,54 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import UseAuth from "../../hooks/UseAuth";
+import swal from "sweetalert";
+import { useState } from "react";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-    const {createUser} = UseAuth()
+  const [registerError, setRegisterError] = useState();
+  const [showPassword, setShowPassword] = useState(false);
+  const location = useLocation();
+  const { createUser } = UseAuth();
+
   const handleRegister = (e) => {
     e.preventDefault();
     console.log(e.currentTarget);
     const form = new FormData(e.currentTarget);
-    const email = form.get('email')
-    const password = form.get('password')
-    const photoUrl = form.get('photoUrl')
-    const name = form.get('name')
-    console.log(email,password,photoUrl,name);
-
-    createUser(email,password)
-    .then(result => {
-        console.log(result.user)
-    })
-    .catch(error =>{
-    console.log(error)})
-    
+    const email = form.get("email");
+    const password = form.get("password");
+    const photoUrl = form.get("photoUrl");
+    const name = form.get("name");
+    console.log(email, password, photoUrl, name);
+    e.target.elements.email.value = "";
+        e.target.elements.password.value = "";
+        e.target.elements.photoUrl.value = "";
+        e.target.elements.name.value = "";
+    if (password.length < 6) {
+      setRegisterError("Password should be at least 6 characters or longer");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setRegisterError("Your password should contain a  uppercase letter");
+      return;
+    } else if (!/[a-z]/.test(password)) {
+      setRegisterError("Your password should contain a  lowercase letter");
+      return;
+    }
+    setRegisterError("");
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        swal("Good job!", "Successfully Registered!", "success");
+        return <Navigate state={location.pathname} to="/login"></Navigate>;
+        
+      })
+      .catch((error) => {
+        console.error(error);
+        swal(
+          "Oops!",
+          "An error occurred during registration. Please try again.",
+          "error"
+        );
+      });
   };
   return (
     <div className="hero min-h-screen">
@@ -29,7 +58,7 @@ const Register = () => {
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleRegister} className="card-body">
-          <div className="form-control">
+            <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
               </label>
@@ -65,19 +94,25 @@ const Register = () => {
                 required
               />
             </div>
-            
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                placeholder="password"
-                name="password"
-                className="input input-bordered"
-                required
-              />
-            </div>
+
+            <div className="relative">
+            <input
+              className="border-2 px-4 py-2 w-3/4 border-gray-400 m-2 rounded-md"
+              type={showPassword ? "text" : "password"}
+              name="password"
+              placeholder="Enter your password"
+              required
+              span
+              id=""
+            />
+            <span
+              className="absolute top-5 text-2xl"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+            </span>
+          </div>
+            {registerError && <p className="text-red-700">{registerError}</p>}
             <div className="form-control mt-6">
               <button className="btn btn-primary">Register</button>
             </div>
