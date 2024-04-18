@@ -32,14 +32,13 @@ const AboutUs = () => {
               possible in luxury real estate. At Prime Place, our values are
               rooted in integrity, professionalism, and a relentless pursuit of
               perfection. We believe in transparency, honesty, and putting our
-              clients&apos; needs first in every interaction. As we continue
-              to grow and expand our reach, our goal remains unwavering: to be
-              the premier destination for luxury real estate worldwide. We are
-              proud of our achievements and grateful for the trust our clients
-              have placed in us. With Prime Place, your dream home is just a
-              step away.&quot;
+              clients&apos; needs first in every interaction. As we continue to
+              grow and expand our reach, our goal remains unwavering: to be the
+              premier destination for luxury real estate worldwide. We are proud
+              of our achievements and grateful for the trust our clients have
+              placed in us. With Prime Place, your dream home is just a step
+              away.&quot;
             </p>
-            
           </div>
           <img
             src="https://i.ibb.co/J7pfp5C/primeplaces.jpg"
@@ -53,9 +52,32 @@ const AboutUs = () => {
               <h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">
                 Our team
               </h1>
-              <p className="max-w-2xl text-center dark:text-gray-600">
-              At Prime Place, we are proud to have a team of dedicated professionals who are committed to excellence in every aspect of luxury real estate. Our team brings together a wealth of expertise, passion, and industry knowledge to deliver unparalleled service to our clients.
+              <section className="p-6">
+                <div className="container max-w-xl mx-auto">
+                  <div className="flex flex-col items-center w-full p-6 space-y-8 rounded-md lg:h-full lg:p-8 dark:bg-gray-50 dark:text-gray-800">
+                    <img
+                      src="https://i.ibb.co/qk1htBS/myself.jpg"
+                      alt=""
+                      className="w-20 h-20 rounded-full dark:bg-gray-500"
+                    />
+                    <blockquote className="max-w-lg text-lg italic font-medium text-center">
+                    <p className="max-w-2xl text-center dark:text-gray-600">
+                At Prime Place, we are proud to have a team of dedicated
+                professionals who are committed to excellence in every aspect of
+                luxury real estate. Our team brings together a wealth of
+                expertise, passion, and industry knowledge to deliver
+                unparalleled service to our clients.
               </p>
+                    </blockquote>
+                    <div className="text-center dark:text-gray-600">
+                      <p className="font-extrabold">Md Nahidul Islam</p>
+                      <p>CEO of Prime Places</p>
+                    </div>
+                    
+                  </div>
+                </div>
+              </section>
+              
               <div className="flex flex-row flex-wrap-reverse justify-center">
                 <div className="flex flex-col justify-center m-8 text-center">
                   <img

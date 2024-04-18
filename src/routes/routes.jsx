@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import UserProfile from "../pages/userProfile/UserProfile";
 import Gallery from "../pages/Gallery/Gallery";
 import AboutUs from "../pages/AboutUs/AboutUs";
+import TermsOfService from "../pages/Terms/TermsOfService";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/terms",
+        element: <TermsOfService></TermsOfService>,
       },
       {
         path: "/property/:id",
