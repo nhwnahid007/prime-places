@@ -1,14 +1,17 @@
-import { Link, Navigate, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import UseAuth from "../../hooks/UseAuth";
 import swal from "sweetalert";
 import { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const [registerError, setRegisterError] = useState();
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
   const location = useLocation();
-  const { createUser } = UseAuth();
+  const from = location?.state || "/";
+  const { createUser, updateUserProfile,setUser } = UseAuth();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -19,28 +22,54 @@ const Register = () => {
     const photoUrl = form.get("photoUrl");
     const name = form.get("name");
     console.log(email, password, photoUrl, name);
-    e.target.elements.email.value = "";
-        e.target.elements.password.value = "";
-        e.target.elements.photoUrl.value = "";
-        e.target.elements.name.value = "";
+    // e.target.elements.email.value = "";
+    //     e.target.elements.password.value = "";
+    //     e.target.elements.photoUrl.value = "";
+    //     e.target.elements.name.value = "";
     if (password.length < 6) {
       setRegisterError("Password should be at least 6 characters or longer");
+      swal(
+        "Oops!",
+        "Password should be at least 6 characters or longer. Please try again.",
+        "error"
+      );
       return;
     } else if (!/[A-Z]/.test(password)) {
       setRegisterError("Your password should contain a  uppercase letter");
+      swal(
+        "Oops!",
+        "Your password should contain a  uppercase letter",
+        "error"
+      );
       return;
     } else if (!/[a-z]/.test(password)) {
       setRegisterError("Your password should contain a  lowercase letter");
+      swal(
+        "Oops!",
+        "Your password should contain a  lowercase letter",
+        "error"
+      );
       return;
     }
     setRegisterError("");
     createUser(email, password)
-      .then((result) => {
-        console.log(result.user);
-        swal("Good job!", "Successfully Registered!", "success");
-        return <Navigate state={location.pathname} to="/login"></Navigate>;
+      .then(() => {
+        updateUserProfile(name,photoUrl)
+        .then(()=>{
+          setUser({displayName : name, photoURL : photoUrl})
+            navigate(from)
+    
+        })
+      
+        
+        swal("Good job!", "Successfully Registered!","success");
         
       })
+
+      
+
+
+
       .catch((error) => {
         console.error(error);
         swal(
@@ -52,6 +81,9 @@ const Register = () => {
   };
   return (
     <div className="hero min-h-screen">
+      <Helmet>
+        <title>Register</title>
+      </Helmet>
       <div className="hero-content flex-col">
         <div className="text-center ">
           <h1 className="text-5xl font-bold">Register now!</h1>

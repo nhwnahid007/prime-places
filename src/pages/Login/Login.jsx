@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import UseAuth from "../../hooks/UseAuth";
 import swal from "sweetalert";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { signInUser, googleLogin, githubLogin } = UseAuth();
@@ -41,6 +42,9 @@ const Login = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Sign in</title>
+      </Helmet>
       <div className="hero min-h-screen">
         <div className="hero-content flex-col ">
           <div className="text-center ">

@@ -1,17 +1,15 @@
-import { FaBars, } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import UseAuth from "../../hooks/UseAuth";
 
 const Navbar = () => {
   const { user, logOut } = UseAuth();
-  console.log(user)
+  console.log(user);
   // const photoURL = user?.photoURL;
   // console.log(photoURL)
   const handleSignOut = () => {
     logOut();
   };
-
-  
 
   const navLinks = (
     <>
@@ -19,9 +17,21 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
+        <NavLink to="/gallery">Gallery</NavLink>
+      </li>
+      <li>
+        <NavLink to="/about">About Us</NavLink>
+      </li>
+
+      <li>
         <NavLink to="/contact">Contact</NavLink>
       </li>
 
+      {user && (
+        <li>
+          <NavLink to="/user">User Profile</NavLink>
+        </li>
+      )}
       {user && (
         <li>
           <NavLink to="/update">Update Profile</NavLink>
@@ -31,7 +41,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar mt-2 bg-base-100">
       <div className="navbar-start z-10">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -52,11 +62,11 @@ const Navbar = () => {
             src="https://i.ibb.co/mJ1wHr2/primeplaces.png"
             alt=""
           />{" "}
-          Prime Places
+          <span className="hidden md:flex">Prime Places</span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu space-x-2 menu-horizontal px-1">
           {/*  */}
           {navLinks}
         </ul>
@@ -65,15 +75,22 @@ const Navbar = () => {
       <div className="navbar-end space-x-2">
         {user ? (
           <>
-            <div className="tooltip tooltip-left " data-tip={user?.displayName||user?.email}>
+            <Link
+              to="/user"
+              className="tooltip tooltip-left "
+              data-tip={user?.displayName}
+            >
               <img
-                className="w-12 rounded-full"
-                src={user?.photoURL}
+                className="w-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-500 dark:ring-violet-600 dark:ring-offset-gray-100"
+                src={
+                  user?.photoURL ||
+                  "https://i.ibb.co/FHfFTWX/User-Profile-PNG-Free-Download.png"
+                }
                 alt="userPhoto"
               />
-            </div>
+            </Link>
 
-            <button onClick={handleSignOut} className="btn">
+            <button onClick={handleSignOut} className="btn font-bold">
               Logout
             </button>
           </>
