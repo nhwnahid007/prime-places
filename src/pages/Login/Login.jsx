@@ -13,6 +13,7 @@ const Login = () => {
     socialProvider().then((result) => {
       if (result.user) {
         if (result.user) {
+          swal("Good job!", "Successfully Logged In!", "success");
           navigate(from);
         }
       }

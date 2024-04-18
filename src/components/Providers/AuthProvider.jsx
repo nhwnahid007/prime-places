@@ -10,6 +10,7 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../../Firebase/firebase.config";
+import swal from "sweetalert";
 const googleProvider = new GoogleAuthProvider();
 const GithubProvider = new GithubAuthProvider();
 export const AuthContext = createContext(null);
@@ -41,9 +42,13 @@ const AuthProvider = ({ children }) => {
     };
   //log outt
   const logOut = () => {
+    
     setLoading(true);
     // setUser(null);
-    signOut(auth);
+    signOut(auth)
+    .then(()=>{
+      swal("Good job!", "Successfully Logged out!", "success");
+    })
   };
       // update user profile
       const updateUserProfile = (name, photoURL) => {

@@ -1,6 +1,7 @@
 import { FaBars } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import UseAuth from "../../hooks/UseAuth";
+import swal from "sweetalert";
 
 const Navbar = () => {
   const { user, logOut } = UseAuth();
@@ -8,7 +9,11 @@ const Navbar = () => {
   // const photoURL = user?.photoURL;
   // console.log(photoURL)
   const handleSignOut = () => {
-    logOut();
+    logOut()
+    .then(()=>{
+      console.log('logged out')
+      swal("Good job!", "Successfully Logged Out!", "success");
+    })
   };
 
   const navLinks = (
@@ -62,7 +67,7 @@ const Navbar = () => {
             src="https://i.ibb.co/mJ1wHr2/primeplaces.png"
             alt=""
           />{" "}
-          <span className="hidden md:flex">Prime Places</span>
+          <span className="hidden z-0 md:flex">Prime Places</span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -77,13 +82,13 @@ const Navbar = () => {
           <>
             <Link
               to="/user"
-              className="tooltip tooltip-left "
+              className="tooltip z-10 tooltip-left "
               data-tip={user?.displayName}
             >
               <img
                 className="w-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-500 dark:ring-violet-600 dark:ring-offset-gray-100"
                 src={
-                  user?.photoURL ||
+                  user.photoURL ||
                   "https://i.ibb.co/FHfFTWX/User-Profile-PNG-Free-Download.png"
                 }
                 alt="userPhoto"

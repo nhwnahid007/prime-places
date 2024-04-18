@@ -96,7 +96,7 @@ const Register = () => {
               </label>
               <input
                 type="text"
-                placeholder="email"
+                placeholder="name"
                 name="name"
                 className="input input-bordered"
                 required
@@ -141,7 +141,7 @@ const Register = () => {
               className="absolute top-5 text-2xl"
               onClick={() => setShowPassword(!showPassword)}
             >
-              {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+              {showPassword ?<FaRegEye />  : <FaRegEyeSlash /> }
             </span>
           </div>
             {registerError && <p className="text-red-700">{registerError}</p>}
