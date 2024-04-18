@@ -4,9 +4,10 @@ import { IoLocationSharp } from "react-icons/io5";
 import { FaStar } from "react-icons/fa6";
 import { BiArea } from "react-icons/bi";
 const EstateCard = ({ estateData }) => {
-  const { id,image, estate_title, price,area, location,status,stars } = estateData;
+  const { id, image, estate_title, price, area, location, status, stars } =
+    estateData;
   return (
-    <div className="w-lg relative h-[600px]  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800 mx-auto">
+    <div className="max-w-lg relative h-[670px] lg:h-[650px] rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800 mx-auto">
       <img
         src={image}
         alt=""
@@ -18,33 +19,31 @@ const EstateCard = ({ estateData }) => {
             {estate_title}
           </h2>
           <p className="flex text-xl items-center dark:text-gray-800">
-          <IoLocationSharp /> {location}
+            <IoLocationSharp /> {location}
           </p>
           <p className=" text-xl dark:text-gray-800">
-          <span className="font-bold">Price: </span>{price}
-          <p>
+            <span className="font-bold">Price: </span>
+            {price}
+            <p></p>
+            <div className="flex mt-2 items-center justify-between">
+              <p className=" text-xl dark:text-gray-800">{status}</p>
+              <p className="flex text-xl items-center dark:text-gray-800">
+                <BiArea /> {area}
               </p>
-             <div className="flex items-center justify-between">
-                  <p className=" text-xl dark:text-gray-800">
-                  {status} 
-                  </p>
-                  <p className="flex text-xl items-center dark:text-gray-800">
-          <BiArea /> {area}
+              <p className="flex items-center justify-center text-xl dark:text-gray-800">
+                {stars} <FaStar className="text-orange-400" />
+              </p>
+            </div>
           </p>
-                  <p className="flex items-center justify-center text-xl dark:text-gray-800">
-                  {stars} <FaStar className="text-orange-400" />
-                  </p>
-             </div>
-          </p>
-          
         </div>
         <div className="">
-            <Link to={`/property/${id}`}
-              type="button"
-              className="flex justify-center items-center text-white text-xl bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg px-5 py-2.5 text-center me-2 mb-2 absolute bottom-4 left-1/3 transform -translate-x-1/2"
-            >
-              view property
-            </Link>
+          <Link
+            to={`/property/${id}`}
+            type="button"
+            className="flex justify-center items-center text-white text-xl bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg px-5 py-2.5 text-center me-2 mb-2 absolute bottom-4 left-1/3 transform -translate-x-1/2"
+          >
+            view property
+          </Link>
         </div>
       </div>
     </div>
