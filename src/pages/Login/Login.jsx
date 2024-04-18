@@ -2,8 +2,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import UseAuth from "../../hooks/UseAuth";
 import swal from "sweetalert";
 import { Helmet } from "react-helmet";
+import { useState } from "react";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const { signInUser, googleLogin, githubLogin } = UseAuth();
   const location = useLocation();
   console.log(location);
@@ -74,13 +77,22 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Enter your password"
-                  className="input input-bordered"
-                  required
-                />
+                <div className="relative">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    placeholder="Enter your password"
+                    className="input input-bordered"
+                    required
+                  />
+                  <span
+              className="absolute top-3 mx-3 text-2xl"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ?<FaRegEye className="text3xl" />  : <FaRegEyeSlash className="text-3xl" /> }
+            </span>
+                </div>
+                
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
