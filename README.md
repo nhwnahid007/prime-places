@@ -4,7 +4,7 @@ These features and characteristics position Prime Places as a premier destinatio
 
  ## [Prime Places](https://prime-places.web.app)
 
-  check out our website [https://your-book-mania.netlify.app/](https://your-book-mania.netlify.app/).
+  check out our website [https://prime-places.web.app](https://prime-places.web.app).
 
 
 
