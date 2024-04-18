@@ -2,7 +2,12 @@ import { Helmet } from "react-helmet-async";
 
 const Gallery = () => {
   return (
-    <section className="py-6 dark:bg-gray-100 dark:text-gray-900">
+    <section data-aos="zoom-in-left"
+
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    
+    data-aos-anchor-placement="top-center"  className="py-6 dark:bg-gray-100 dark:text-gray-900">
         <Helmet>
         <title>Gallery</title>
       </Helmet>

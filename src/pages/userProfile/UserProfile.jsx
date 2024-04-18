@@ -5,7 +5,14 @@ import { Link } from "react-router-dom";
 const UserProfile = () => {
   const { user } = UseAuth();
   return (
-    <div className="min-h-screen">
+    <div
+    data-aos="flip-left"
+
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    
+    data-aos-anchor-placement="top-center"
+     className="min-h-screen">
       <div className="max-w-sm my-20 lg:my-40 mx-auto bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg">
         <div className="border-b px-4 pb-6">
           <div className="text-center my-4">
@@ -15,7 +22,7 @@ const UserProfile = () => {
               alt=""
             />
             <div className="py-2">
-              <h3 className="font-bold text-2xl text-gray-800 dark:text-white mb-1">
+              <h3 className="animate__animated animate__slideInLeft font-bold text-2xl text-gray-800 dark:text-white mb-1">
                 {user.displayName}
               </h3>
               <div className="inline-flex gap-2 text-gray-700 dark:text-gray-300 items-center">

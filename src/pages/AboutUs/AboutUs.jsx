@@ -2,12 +2,17 @@ import { Helmet } from "react-helmet-async";
 
 const AboutUs = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div data-aos="flip-right"
+
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    
+    data-aos-anchor-placement="top-center" className="min-h-screen bg-gray-100">
       <Helmet>
         <title>About Us</title>
       </Helmet>
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center mb-8">
+        <h1 className=" animate__animated animate__rotateIn text-4xl font-bold text-center mb-8">
           About Prime Place
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

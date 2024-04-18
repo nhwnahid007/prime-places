@@ -15,7 +15,12 @@ const handleContactInfo = ()=>{
 
 const Contact = () => {
   return (
-    <div className="min-h-screen">
+    <div data-aos="zoom-out-down"
+
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    
+    data-aos-anchor-placement="top-center" className="min-h-screen">
       <Helmet>
         <title>Contact</title>
       </Helmet>

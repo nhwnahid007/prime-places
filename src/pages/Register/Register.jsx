@@ -80,7 +80,12 @@ const Register = () => {
       });
   };
   return (
-    <div className="hero min-h-screen">
+    <div data-aos="zoom-out-down"
+
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    
+    data-aos-anchor-placement="top-center" className="hero min-h-screen">
       <Helmet>
         <title>Register</title>
       </Helmet>

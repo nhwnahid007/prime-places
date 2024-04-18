@@ -21,7 +21,14 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen mt-16 lg:flex-row lg:ml-44 lg:max-w-[1300px] mx-auto lg:space-x-8">
+    <div
+    data-aos="flip-right"
+
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    
+    data-aos-anchor-placement="top-center"
+     className="flex flex-col min-h-screen mt-16 lg:flex-row lg:ml-44 lg:max-w-[1300px] mx-auto lg:space-x-8">
       <Helmet>
         <title>Update Profile</title>
       </Helmet>
