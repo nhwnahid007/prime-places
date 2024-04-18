@@ -132,23 +132,26 @@ const Register = () => {
               />
             </div>
 
-            <div className="relative">
-            <input
-              className="border-2 px-4 py-2 w-3/4 border-gray-400 m-2 rounded-md"
-              type={showPassword ? "text" : "password"}
-              name="password"
-              placeholder="Enter your password"
-              required
-              span
-              id=""
-            />
-            <span
-              className="absolute top-5 text-2xl"
+            <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Password</span>
+                </label>
+                <div className="relative">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    placeholder="Enter your password"
+                    className="input w-full input-bordered"
+                    required
+                  />
+                  <span
+              className="absolute cursor-pointer top-3 right-3 text-2xl"
               onClick={() => setShowPassword(!showPassword)}
             >
-              {showPassword ?<FaRegEye />  : <FaRegEyeSlash /> }
+              {showPassword ?<FaRegEye className="text3xl" />  : <FaRegEyeSlash className="text-3xl" /> }
             </span>
-          </div>
+                </div>
+              </div>
             {registerError && <p className="text-red-700">{registerError}</p>}
             <div className="form-control mt-6">
               <button className="btn btn-primary">Register</button>

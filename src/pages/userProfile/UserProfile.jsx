@@ -1,6 +1,7 @@
 import { MdEmail } from "react-icons/md";
 import UseAuth from "../../hooks/UseAuth";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const UserProfile = () => {
   const { user } = UseAuth();
@@ -13,6 +14,9 @@ const UserProfile = () => {
     
     data-aos-anchor-placement="top-center"
      className="min-h-screen">
+      <Helmet>
+        <title>User</title>
+      </Helmet>
       <div className="max-w-sm my-20 lg:my-40 mx-auto bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg">
         <div className="border-b px-4 pb-6">
           <div className="text-center my-4">

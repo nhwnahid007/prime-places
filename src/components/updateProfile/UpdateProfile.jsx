@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import UseAuth from "../../hooks/UseAuth";
 import { useEffect, useState } from "react";
+import swal from "sweetalert";
 
 const UpdateProfile = () => {
   const { updateUserProfile, user, setUser } = UseAuth();
@@ -16,7 +17,10 @@ const UpdateProfile = () => {
 
   const handleUpdateProfile = (e) => {
     e.preventDefault();
-    updateUserProfile(name, photoURL);
+    updateUserProfile(name, photoURL)
+    .then(()=>{
+      swal("Good job!", "Successfully updated profile!", "success");
+    })
     setUser({ displayName: name, photoURL }); // Update local state for immediate UI feedback
   };
 

@@ -82,11 +82,11 @@ const Login = () => {
                     type={showPassword ? "text" : "password"}
                     name="password"
                     placeholder="Enter your password"
-                    className="input input-bordered"
+                    className="input w-full input-bordered"
                     required
                   />
                   <span
-              className="absolute top-3 mx-3 text-2xl"
+              className="absolute cursor-pointer top-3 right-3 text-2xl"
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ?<FaRegEye className="text3xl" />  : <FaRegEyeSlash className="text-3xl" /> }
