@@ -13,7 +13,7 @@ const TermsOfService = () => {
         </h1>
         <div className="prose prose-lg text-gray-700">
           {" "}
-          {/* Uses Tailwind's prose component */}
+          
           <h2>1. Introduction</h2>
           <p>
             Welcome to Prime Place! These Terms of Service Terms, Terms of
