@@ -16,6 +16,46 @@ These features and characteristics position Prime Places as a premier destinatio
 - Expert Real Estate Guidance: With a team of experienced real estate agents and industry experts, Prime Places offers professional guidance and advice to help clients navigate the luxury real estate market with confidence and ease.
 - Impeccable Customer Experience: Prime Places is committed to delivering an impeccable customer experience, from the initial inquiry to the final closing, ensuring that every client receives personalized attention, transparency, and integrity throughout the buying or renting process.
 
+  # To run the development server locally, follow these steps:
+
+
+
+## Prerequisites
+
+- Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+## Installation and Running
+
+1. **Clone the Repository:**
+    ```bash
+    git clone https://github.com/nhwnahid007/prime-places.git
+    cd prime-places
+    ```
+
+2. **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+
+3. **Run the Development Server:**
+    ```bash
+    npm run dev
+    ```
+
+This will start the server
+
+## Additional Commands
+
+- **Build for Production:**
+    ```bash
+    npm run build
+    ```
+
+- **Run Tests:**
+    ```bash
+    npm test
+    ```
+
 # Package used:
 
 -  ## [Swipper Slider](https://swiperjs.com/)
